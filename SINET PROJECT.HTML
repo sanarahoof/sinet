@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SINET Education</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  
+  
+  
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      background-color: #fff;
+      color: #0b3d91;
+    }
+
+    /* Header */
+    .header {
+      background-color: #144a99;
+      color: white;
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 35px;
+      font-weight: bold;
+      margin-left: 20px;
+    }
+
+    .buttons {
+      margin-right: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+      text-decoration: none;
+      margin: 5px;
+    }
+
+    .btn-helpline {
+      background-color: #c32f2f;
+      color: white;
+    }
+
+    .btn-whatsapp {
+      background-color: green;
+      color: white;
+    }
+
+    h1 {
+      font-size: 50px;
+      margin-top: 50px;
+    }
+
+    p {
+      font-size: 20px;
+      margin: 20px auto;
+      max-width: 900px;
+      line-height: 1.6;
+    }
+
+    .choose {
+      margin-top: 40px;
+      font-size: 28px;
+      color: #0b3d91;
+      cursor: pointer;
+    }
+
+    /* Section Heading */
+    .heading {
+      text-align: left;
+      padding: 40px;
+      font-size: 40px;
+      font-weight: 300;
+      background-color: lightgrey;
+      color: #222;
+    }
+
+    /* Courses */
+    .courses {
+      background-color: lightgrey;
+      padding: 20px;
+      margin-bottom: 40px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .courses .item {
+      
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 1px;
+      width: 200px;
+      text-align: center;
+    }
+
+    .courses h3 {
+      color: #003366;
+      margin-bottom: 10px;
+    }
+
+    .courses .btn {
+      background: #a60000;
+      color: yellow;
+    }
+
+    .courses .btn:hover {
+      background: #7a0000;
+    }
+
+    /* Class Section */
+    .class-section {
+      background-color: lightgray;
+      padding: 10px;
+    }
+
+    .class-section h2 {
+      color: #003366;
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .class-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .class-box {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      width: 250px;
+      padding: 20px;
+      text-align: left;
+    }
+
+    .class-box h3 {
+      background: #003366;
+      color: #fff;
+      padding: 10px;
+      border-radius: 6px 6px 0 0;
+      margin: -20px -20px 15px -20px;
+    }
+
+    .class-box ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .class-box li {
+      padding: 10px 0;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .class-box li:last-child {
+      border-bottom: none;
+    }
+
+    /* Diploma & Trending Courses */
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+      max-width: 1000px;
+      margin: 40px auto;
+    }
+
+    .course {
+    
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 20px;
+    }
+
+    .course h2 {
+      color: darkred;
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .course p {
+      color: darkblue;
+      font-size: 16px;
+      margin-bottom: 15px;
+      line-height: 1.4;
+    }
+
+    .course .btn {
+      background-color: darkred;
+      color: yellow;
+      font-size: 14px;
+      padding: 8px 15px;
+    }
+
+    .course .btn:hover {
+      background-color: #a30000;
+    }
+
+    /* Short Term Courses */
+    .course-list {
+      max-width: 800px;
+      margin: 30px auto;
+      text-align: left;
+    }
+
+    .course-item {
+      display: block;
+      background-color: #0d47a1;
+      color: white;
+      text-decoration: none;
+      padding: 15px 20px;
+      margin: 10px 0;
+      border-radius: 6px;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+
+    .course-item:hover {
+      background-color: #08306b;
+    }
+   
+
+    /* Perfect 3×2 grid alignment */
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 60px;                 /* space between items */
+  justify-items: center;     /* center items horizontally */
+  align-items: center;       /* center items vertically */
+  padding: 50px 20px;        /* reduce heavy padding */
+  max-width: 1000px;
+  margin: auto;
+  background: #b3b3b3;       /* your grey bg */
+  border-radius: 8px;
+}
+
+.service-box {
+  text-align: center;
+  color: white;
+}
+
+.service-box img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  background: white;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.service-box p {
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+    /* Section Heading */
+    .headings {
+      text-align: left;
+      padding: 40px;
+      font-size: 30px;
+      font-weight: 150;
+      line-height: 1.2;
+      max-width: 900px; 
+      
+      color:darkblue;
+    }
+
+
+   /* LEFT TEXT + RIGHT IMAGE SECTION */
+.location-section {
+  display: flex;
+  align-items: flex-start;
+  
+  
+  gap: 40px;
+  padding: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.location-left {
+  max-width: 600px;
+  font-size: px;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.location-left h1 {
+  font-size: 45px;
+  color: #0b3d91;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.location-left i {
+  color: #f1a100;
+  margin-right: 10px;
+}
+
+.phone-list div {
+  margin: 6px 0;
+  display: flex;
+  align-items: center;
+}
+
+.phone-list i {
+  color: #f1a100;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.location-right img {
+  width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      text-align: center; /* centers image & text */
+      background-color: #fff; /* clean background */
+    }
+
+    .bottom img {
+      max-width: 450px;      /* image won’t go wider than 500px */
+      height: auto;          /* keeps proportions */
+      border-radius: 10px;   /* rounded corners */
+      box-shadow: 0 4px 8px rgba(184, 6, 6, 0.2); /* soft shadow */
+    }
+     h1 {
+      font-size: 50px;
+      margin-top: 50px;
+    }
+
+    p {
+      font-size: 20px;
+      margin: 20px auto;
+      max-width: 900px;
+      line-height: 1.6;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .highlights {
+      max-width: 900px;
+      margin: 40px auto;
+      border: 1px solid #ddd;
+    }
+    .highlight {
+      padding: 15px 20px;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+    .highlight:nth-child(even) {
+      background-color: white; /* white */
+    }
+    .highlight:nth-child(odd) {
+      background-color: #8cbbd2; /* light blue */
+    }
+    strong {
+      font-weight: bold;
+    
+    }
+     body {
+      font-family: Arial, sans-serif;
+      margin: 100;
+      padding: 0px;
+      text-align: center;
+      background-color: white; /* keeps background clean */
+    }
+
+    .review-container {
+      display: inline-block;
+      text-align: left;
+    }
+
+    .review-container img {
+      max-width: 550px;
+      height: auto;
+    }
+
+    .review-text {
+      font-size: 22px;
+      margin-top: 5px;
+      color: #1a3d7c;
+      font-weight: normal;
+    }
+
+    .review-text span {
+      font-weight: bold;
+      color: #0b57d0; /* Google Blue */
+    }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f8;
+      color: #222;
+    }
+    .contact-section {
+      padding: 40px;
+      text-align: center;
+    }
+    .contact-section h1 {
+      font-size: 36px;
+      margin-bottom: 60px;
+      text-align: center;
+    }
+    .contact-box {
+      background: #fff;
+      padding: 50px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      max-width: 1000px;
+      margin: auto;
+      text-align: left;
+    }
+    .contact-box h2 {
+      font-size: 20px;
+      margin-bottom: 8px;
+      margin-top: 20px;
+    }
+    .contact-box p {
+      margin: 5px 0;
+      line-height: 1.6;
+    }
+    .contact-box i {
+      color: #2a1b74;
+      margin-right: 8px;
+    }
+    .social-icons {
+      margin-top: 20px;
+      text-align: center;
+    }
+    .social-icons a {
+      margin: 0 10px;
+      color: #333;
+      font-size: 22px;
+      transition: color 0.3s;
+    }
+    .social-icons a:hover {
+      color: #f44336;
+    }
+    
+  </style>
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+    
+  
+</head>
+<body>
+
+  <div class="header">
+    <div class="logo">SINET</div>
+    <div class="buttons">
+      <button class="btn btn-helpline">Help Line</button>
+      <button class="btn btn-whatsapp">WhatsApp</button>
+    </div>
+  </div>
+
+  <h1>Welcome</h1>
+  <p>"To Sinet Education, the leading ISO certified Educational and Job training brand"</p>
+  <div class="choose">Click here to choose your course:</div>
+  <img src="images/sinet-software-courses (1).jpg.webp" alt="software">
+  <img src="images/sinet-multimedia-courses.webp" alt="accounting"><br>
+  <img src="images/sinet-networking-courses.webp" alt="networking">
+  <img src="images/sinet-software-courses (1).jpg.webp" alt="multimedia">
+
+  <div class="heading">
+    Master the Best <br>
+    Placement Oriented <br>
+    Courses from SINET
+  </div>
+
+ 
+  <div class="courses">
+    <div class="item"><h3>SAP FI-CO</h3><a href="#" class="btn">Brochure</a></div>
+    <div class="item"><h3>PYTHON FULL STACK</h3><a href="#" class="btn">Brochure</a></div>
+    <div class="item"><h3>CCNP CCNA</h3><a href="#" class="btn">Brochure</a></div>
+    <div class="item"><h3>SAP MM</h3><a href="#" class="btn">Brochure</a></div>
+    <div class="item"><h3>Flutter Dart</h3><a href="#" class="btn">Brochure</a></div>
+    <div class="item"><h3>Azure ADMIN</h3><a href="#" class="btn">Brochure</a></div>
+  
+
+
+  <div class="class-section">
+    <h2>Class available any time!</h2>
+    <div class="class-container">
+      <div class="class-box">
+        <h3>CLASS AVAILABLE</h3>
+        <ul>
+          <li>Online Class</li>
+          <li>Offline Class</li>
+          <li>Regular Class</li>
+          <li>Weekend Class</li>
+          <li>Evening & Night</li>
+        </ul>
+      </div>
+      
+      <div class="class-box">
+        <h3>CLASS TIME</h3>
+        <ul>
+          <li>Half Day Daily</li>
+          <li>Daily 3 Hours</li>
+          <li>Daily 1 Hour</li>
+          <li>Weekly 5 Hours</li>
+          <li>Customized</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <h1>Join for Hot Diplomas</h1>
+  <p>"Sinet Education crafted Diploma programs using the best of industry and career-demanding Tools and Practices"</p>
+
+ 
+    <div class="course"><h2>DBFM</h2><p>Diploma in Business Finance Management</p><a href="#" class="btn">Brochure</a></div>
+    <div class="course"><h2>DISE</h2><p>Diploma in Software Engineering</p><a href="#" class="btn">Brochure</a></div><br>
+    <div class="course"><h2>DITA</h2><p>Diploma in IT Infrastructure Administration</p><a href="#" class="btn">Brochure</a></div><br>
+    <div class="course"><h2>DGID</h2><p>Diploma in Graphic Illustration Designing</p><a href="#" class="btn">Brochure</a></div>
+  </div>
+
+  <h1>Hot Trending Courses</h1>
+  <p>"Master the most trending online or offline courses with affordable fees and job placements from Sinet!"</p>
+
+  
+    <div class="course"><h2>MERN Stack</h2><p>MERN Stack Development Course</p><a href="#" class="btn">Details</a></div>
+    <div class="course"><h2>Python FullStack</h2><p>Python FullStack Course</p><a href="#" class="btn">Details</a></div>
+  </div>
+
+  <h1>Short Term Courses</h1>
+  <p>"Select our tailor-made, industry-endorsed crash course programs with Certification."</p>
+
+  <div class="course-list">
+    <a href="#" class="course-item">Financial Accounting Courses &gt;&gt;</a>
+    <a href="#" class="course-item">Software Development Courses &gt;&gt;</a>
+    <a href="#" class="course-item">Networking & Cloud Courses &gt;&gt;</a>
+    <a href="#" class="course-item">CAD and Multimedia Courses &gt;&gt;</a>
+  </div>
+
+  <h1>Job Placements</h1>
+  <p>Click here to see our latest Job placements</p>
+  <img src="images/job-placement-sinet-perinthalmanna.webp">
+
+
+  <div class="services-container">
+  
+  <div class="service-box">
+    <img src="images/Get-Certified.png">
+    <p>Get Certified</p>
+  </div>
+
+  <div class="service-box">
+    <img src="images/Certificate-verification.png">
+    <p>Certificate Verification</p>
+  </div>
+
+  <div class="service-box">
+    <img src="images/sinet-support.png">
+    <p>Free Career Guidance</p>
+  </div>
+
+  <div class="service-box">
+    <img src="images/Global-Winners.png">
+    <p>Awards</p>
+  </div>
+
+  <div class="service-box">
+    <img src="images/Testimonials.png">
+    <p>Testimonials</p>
+  </div>
+
+  <div class="service-box">
+    <img src="images/sinet-got-awards.png">
+    <p>Achievements</p>
+  </div>
+
+</div>
+<div class="location-section">
+
+  <!-- LEFT SIDE -->
+  <div class="location-left">
+    <h1>SINET<br>REGIONAL JOB TRAINING INSTITUTE<br>IN PERINTALMANNA MALAPPURAM</h1>
+
+    <p><i class="fa-solid fa-location-dot"></i> <strong>SINET Education</strong><br>
+    First Floor, City Complex, Near Traffic Junction,<br>
+    Calicut Road, Perinthalmanna,<br>
+    Malappuram DT, Kerala, India. Pin 679322
+    </p>
+
+    <div class="phone-list">
+      <div><i class="fa-solid fa-phone"></i> 8086 800 700</div>
+      <div><i class="fa-solid fa-phone"></i> 7059 800 700</div>
+      <div><i class="fa-solid fa-phone"></i> 9946 668 186</div>
+      <div><i class="fa-solid fa-phone"></i> 04933 227 816</div>
+    </div>
+  </div>
+
+  <!-- RIGHT SIDE -->
+  <div class="location-right">
+    <img src="images/python-course-in-sinet-institute (1).webp" alt="Sinet Building">
+  </div>
+
+</div>
+
+
+<div class="bottom">
+    <img src="images/sinet-institute-advantages.webp" alt="Sinet Institute Advantages">
+  
+
+<h1>SINET ADVANTAGES</h1>
+<p>(20 Reasons to Join Sinet Institute.)</p>
+<div class="highlights">
+    <div class="highlight">Sinet is an <strong>ISO 9001: 2015 Certified</strong> educational organization.</div>
+    <div class="highlight">Sinet academic team has <strong>20+ years of experience</strong> in education and training.</div>
+    <div class="highlight">Sinet is the only <strong>WATO Guarantee</strong> Offered Institute (Warranty against Technology Obsolescence).</div>
+    <div class="highlight">Sinet courses are <strong>highly affordable</strong> and gives value for money.</div>
+    <div class="highlight">24 Hour broadband connection and <strong>Wi-Fi enabled campus.</strong></div>
+    <div class="highlight">Sinet has collaborative associations with global education leaders.</div>
+    <div class="highlight">Regional tie-ups with Government agencies for education and training.</div>
+    <div class="highlight">Sinet is a <strong>licensed SAP user</strong> since 2012.</div>
+    <div class="highlight">Sinet is one of the certification facilitators of <strong>global certification</strong> leaders like Microsoft, Oracle, Redhat, Cisco, SAP, etc.</div>
+    <div class="highlight">Sinet offers effective <strong>Job placement training, </strong>self-internship, experience certificates after job training, and job searching support.</div>
+    <div class="highlight">Sinet provides <strong>IEEE project solutions </strong>and assistance for engineering students</div>
+    <div class="highlight">Sinet gives <strong>educational loans at 0% interest</strong></div>
+    <div class="highlight">Sinet runs<strong> "Earn while learn" </strong>support program for financially poor students.</div>
+    <div class="highlight">Sinet maintains academically and professionally  <strong>qualified and experienced faculties .</strong></div>
+    <div class="highlight">Sinet is one of the  <strong>top-ranked educational brands </strong> in India by leading public review companies.</div>
+    <div class="highlight">Sinet Education Trained more than<strong> 10,000+ Students .</strong></div>
+    <div class="highlight"><strong>Internship</strong>    Facility available for selected Courses</div>
+    <div class="highlight">Sinet Conducts<strong>Free Job Placement</strong>    and Skill enhancement Training.</div>
+    <div class="highlight">Sinet Education offers<strong>Best Alumni services</strong></div>
+    <div class="highlight"><strong>Job Placement Cell</strong> with 100% Assistance up to getting hired.</div>
+    </div><br>
+  
+    <img src="images/sinet-google-revies.webp" alt="Google Reviews"> 
+    <p class="review-text">
+      SINET Institute has more than <span>1900 Google Five-Star reviews!</span>
+    </p>
+
+    <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3920.143111303177!2d76.20893061480166!3d10.975598492190675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba7bb154cd1cd21%3A0x9b1d39f1f4f2a2bb!2sSINET%20-%20SAP%2C%20Accounting%2C%20Python%2C%20CCNA%20%26%20Ethical%20Hacking!5e0!3m2!1sen!2sin!4v1692617224123!5m2!1sen!2sin" 
+    allowfullscreen="" 
+    loading="lazy" 
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+
+
+<section class="contact-section">
+    
+    <div class="contact-box">
+      <h1>Contact US!</h1>
+      
+      
+      <h2><i class="fa-solid fa-location-dot"></i> Perinthalmanna</h2>
+      <p><strong>MALAPPURAM</strong></p>
+      <p>SINET Education,<br>
+      First Floor, City Complex, Near Traffic Junction,<br>
+      Calicut Road, Perinthalmanna,<br>
+      Malappuram DT, Kerala, India. Pin 679322</p>
+      <p><i class="fa-solid fa-phone"></i> <a href="tel:8086800700">8086 800 700</a></p>
+      <p><i class="fa-solid fa-phone"></i> <a href="tel:7059800700">7059 800 700</a></p>
+      <p><i class="fa-solid fa-phone"></i> <a href="tel:9946668186">9946 668 186</a></p>
+      <p><i class="fa-solid fa-phone"></i> <a href="tel:04933227816">04933 227 816</a></p>
+      <p><i class="fa-solid fa-envelope"></i> <a href="mailto:info@sinet.in">info@sinet.in</a></p>
+
+      
+      <h2><i class="fa-solid fa-location-dot"></i> Manjeri</h2>
+      <p><strong>MALAPPURAM</strong></p>
+      <p>SINET Education,<br>
+      2nd Floor, MKM Complex, Above SBI ATM,<br>
+      Opp New Bus Stand, Pandikkad Road, Manjeri,<br>
+      Malappuram DT, Kerala, India</p>
+      <p><i class="fa-solid fa-phone"></i> <a href="tel:8943800700">8943 800 700</a></p>
+      <p><i class="fa-solid fa-phone"></i> <a href="tel:9946668186">9946 668 186</a></p>
+
+      <h2><i class="fa-solid fa-location-dot"></i> <strong>Sinet Affiliates
+      Educational Services available:</strong></h2>
+      <p>Kuttippuram, Edappal, Valancheri, Malappuram,<br>
+      Nilambur, Mannarkad, Pattambi, Cherpulassery,<br>
+      Wandoor, Pandikkad, Gudallore</p>
+
+      
+      <div class="social-icons">
+        <img src="images/SINET_fb.png">
+        <img src="images/SINET_LIn.png">
+        <img src="images/SINET_Twitter.png">
+        <img src="images/SINET_Insta.png">
+        <img src="images/SINET_WhatsApp.png">
+        <img src="images/SINET_Ytb.png">
+      </div>
+
+    </div>
+  </section>
+</body>
+</html>
